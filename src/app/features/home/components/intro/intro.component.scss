@@ -1,0 +1,60 @@
+.container {
+    background: var(--ion-color-primary);
+
+    h1 {
+        color: #FFF;
+        text-align: center;
+        text-shadow: 2px 2px 0px #896AF9;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 120%;
+    }
+
+    p {
+        color: #FFF;
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        // font-weight: 700;
+        line-height: 150%;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: center;
+
+        .btn {
+            font-weight: bold;
+            --border-radius: 19px;
+            --padding-top: 1.5em;
+            --padding-bottom: 1.5em;
+            --padding-end: 1.5em;
+            --padding-start: 1.5em
+        }
+    }
+
+    .intro-img {
+        img {
+            width: 100%;
+        }
+    }
+    @media (max-width: 768px) {
+        .btn-container {
+        .btn {
+            --border-radius: 11px;
+            --padding-top: 1em;
+            --padding-bottom: 1em;
+            --padding-end: 1.5em;
+            --padding-start: 1.5em
+        }}
+    
+        h1{
+                font-size: 38px;
+        }
+    
+        p{
+                font-size: 18px;
+        }
+    }
+}
