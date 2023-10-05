@@ -16,36 +16,13 @@
 
             <ion-col size="12">
                 <ion-grid fixed>
-                    <ion-row class="steps">
-                        <ion-col sizeXs="12" sizeMd="4">
-                            <img src="assets/images/step1.png" alt="">
-                            <div class="step-content">
-                                <h4>step 1: </h4>
-                                <h3>Personalise Your Box</h3>
-                            </div>
-                            <p>Tell us about your child's age, interests, and learning goals, and we'll customize their surprise box accordingly.</p>
+                    <ion-row>
+                        <ion-col   
+                        sizeXs="12" sizeMd="4"
+                        *ngFor="let step of steps"
+                         >
+                            <app-step [step]="step"></app-step>
                         </ion-col>
-                      
-                        <ion-col sizeXs="12" sizeMd="4">
-                            <img src="assets/images/step1.png" alt="">
-                            <div class="step-content">
-                                <h4>step 1: </h4>
-                                <h3>Personalise Your Box</h3>
-                            </div>
-                            <p>Tell us about your child's age, interests, and learning goals, and we'll customize their surprise box accordingly.</p>
-                        </ion-col>
-                      
-                        <ion-col sizeXs="12" sizeMd="4">
-                            <img src="assets/images/step1.png" alt="">
-                            <div class="step-content">
-                                <h4>step 1: </h4>
-                                <h3>Personalise Your Box</h3>
-                            </div>
-                            <p>Tell us about your child's age, interests, and learning goals, and we'll customize their surprise box accordingly.</p>
-                        </ion-col>
-                      
-                      
-                        
                     </ion-row>
                 </ion-grid>
             </ion-col>

@@ -3,7 +3,6 @@
     text-align: center;
 
     ion-row {
-        // background-color: #fff9e6;
         padding: 74px 0;
     }
 
@@ -15,7 +14,6 @@
     }
 
     h1 {
-        // background: #FFF9E6;
         font-size: 40px;
         font-style: normal;
         font-weight: 900;
@@ -23,10 +21,8 @@
     }
 
     p {
-        // background: #FFF9E6;
         font-size: 24px;
         font-style: normal;
-        // font-weight: 700;
         line-height: 150%;
     }
 
@@ -44,21 +40,6 @@
             --padding-start: 1.5em
         }
     }
-
-    .steps {
-
-        h4,
-        h3 {
-            font-weight: bold;
-        }
-
-        p {
-            font-size: 15px;
-        }
-
-    }
-
-
     
 }
 @media (max-width: 768px) {
@@ -85,21 +66,6 @@
 
         p {
             font-size: 18px;
-        }
-        .steps {
-            .step-content {
-                display: flex;
-                font-size: 18px;
-                justify-content: center;
-                h4 {
-                    font-size: 18px;
-                    margin-right: 10px;
-                }
-                h3 {
-                    font-size: 18px;
-                }
-
-            }
         }
     }
 

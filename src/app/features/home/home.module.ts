@@ -12,6 +12,7 @@ import { SubscribePage } from './pages/subscribe/subscribe.page';
 import { FooterComponent } from 'src/app/shared/components/footer/footer.component';
 import { SubscribeFormComponent } from './components/subscribe-form/subscribe-form.component';
 import { SummaryComponent } from './components/summary/summary.component';
+import { StepComponent } from './components/steps/step/step.component';
 
 
 @NgModule({
@@ -23,6 +24,6 @@ import { SummaryComponent } from './components/summary/summary.component';
     HeaderComponent,
     FooterComponent
   ],
-  declarations: [HomePage, IntroComponent, StepsComponent, SubscribePage, SubscribeFormComponent, SummaryComponent],
+  declarations: [HomePage, IntroComponent, StepsComponent, SubscribePage, SubscribeFormComponent, SummaryComponent, StepComponent],
 })
 export class HomePageModule {}
