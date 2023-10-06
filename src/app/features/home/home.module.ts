@@ -1,7 +1,7 @@
 import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { HeaderComponent } from 'src/app/shared/components/header/header.component';
@@ -22,7 +22,8 @@ import { StepComponent } from './components/steps/step/step.component';
     IonicModule,
     HomePageRoutingModule,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ReactiveFormsModule
   ],
   declarations: [HomePage, IntroComponent, StepsComponent, SubscribePage, SubscribeFormComponent, SummaryComponent, StepComponent],
 })

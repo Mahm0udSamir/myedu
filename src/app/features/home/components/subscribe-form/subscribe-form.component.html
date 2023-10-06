@@ -5,98 +5,83 @@
     </div>
   
     
+    <form [formGroup]="subscribeForm" (submit)="onSubmit()">
 
-
-    <div class="group">
-        <h4>Contact Information</h4>
-         <div>
-    
-             <ion-label>Your Name</ion-label>
-             <ion-input class="ion-margin-vertical" placeholder="Enter your name" fill="outline"></ion-input>
-         </div>
-         <div>
-    
-             <ion-label>Email</ion-label>
-             <ion-input class="ion-margin-vertical" placeholder="Enter your email" fill="outline"></ion-input>
-         </div>
-    </div>
-
-    <div  class="group">
-        <h4>Child's Information</h4>
-        <div>
-            <ion-label>Child’s Full Name</ion-label>
-            <ion-input class="ion-margin-vertical" placeholder="Enter Child’s Full Name" fill="outline"></ion-input>
-        </div>
-         <div>
-    
-             <ion-label>Child’s Date of Birth</ion-label>
-             <ion-row>
-                <ion-col size="4">
-                     <ion-input  class="ion-margin-vertical" placeholder="Day" fill="outline"></ion-input>
-                </ion-col>
-                <ion-col size="4">
-                     <ion-input  class="ion-margin-vertical" placeholder="Month" fill="outline"></ion-input>
-                </ion-col>
-                <ion-col size="4">
-                     <ion-input  class="ion-margin-vertical" placeholder="Year" fill="outline"></ion-input>
-                </ion-col>
-                
-             </ion-row>
-         </div>
-
-        <div>
-            <ion-label>Grade</ion-label>
-            <ion-input class="ion-margin-vertical" placeholder="Enter Child’s Grade" fill="outline"></ion-input>
+        <div class="group">
+            <h4>Contact Information</h4>
+            <div>
+                <ion-label>Your Name</ion-label>
+                <ion-input formControlName="name" class="ion-margin-vertical" placeholder="Enter your name" fill="outline"></ion-input>
+            </div>
+            <div>
+                <ion-label>Email</ion-label>
+                <ion-input formControlName="email" type="email" class="ion-margin-vertical" placeholder="Enter your email" fill="outline"></ion-input>
+            </div>
         </div>
 
-        <ion-radio-group value="strawberries">
-            <ion-label>Gender</ion-label>
-            <ion-row>
-                <ion-col size="6">         
-                    <ion-item class="radio">
-                        <ion-radio   value="boy" justify="space-between">Boy</ion-radio>
-                    </ion-item>
-                </ion-col>
-                <ion-col size="6">
-                    <ion-item class="radio">
-                        <ion-radio value="girl" justify="space-between">Girl</ion-radio>
-                    </ion-item>
-                </ion-col>
-            </ion-row>
+        <div  class="group">
+            <h4>Child's Information</h4>
+            <div>
+                <ion-label>Child’s Full Name</ion-label>
+                <ion-input formControlName="childName" class="ion-margin-vertical" placeholder="Enter Child’s Full Name" fill="outline"></ion-input>
+            </div>
+            <div>
+                <ion-label>Child’s Date of Birth</ion-label>
+                <ion-row>
+                    <ion-col size="4">
+                        <ion-input formControlName="dayOfBirth" type="number" min="1" max="31" class="ion-margin-vertical" placeholder="Day" fill="outline"></ion-input>
+                    </ion-col>
+                    <ion-col size="4">
+                        <ion-select formControlName="monthOfBirth" class="ion-margin-vertical" justify="space-between" interface="popover"  label="Month" fill="outline">
+                             <ion-select-option *ngFor="let month of months" [value]="month">{{ month }}</ion-select-option>
+                        </ion-select>
+                     </ion-col>
+                    <ion-col size="4">
+                        <ion-select formControlName="yearOfBirth" class="ion-margin-vertical" justify="space-between" interface="popover" label="Year"   fill="outline">
+                            <ion-select-option *ngFor="let year of years" [value]="year">{{ year }}</ion-select-option>
+                        </ion-select>
+                    </ion-col>
+                    
+                </ion-row>
+            </div>
+            <div>
+                <ion-label>Grade</ion-label>
+                <ion-input formControlName="grade" class="ion-margin-vertical" placeholder="Enter Child’s Grade" fill="outline"></ion-input>
+            </div>
+            <ion-radio-group  formControlName="gender">
+                <ion-label>Gender</ion-label>
+                <ion-row>
+                    <ion-col size="6">         
+                        <ion-item class="radio">
+                            <ion-radio   value="boy" justify="space-between">Boy</ion-radio>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col size="6">
+                        <ion-item class="radio">
+                            <ion-radio value="girl" justify="space-between">Girl</ion-radio>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
             </ion-radio-group>
-    </div>
-
-    <div  class="group">
-        <h4>As a parent select any 3 topics</h4>
-        <div>
-            <ion-chip [outline]="true">Outline</ion-chip>
-            <ion-chip [outline]="true">Outline</ion-chip>
-            <ion-chip [outline]="true">Outline</ion-chip>
-            <ion-chip [outline]="true">Outline</ion-chip>
-            <ion-chip [outline]="true">Outline</ion-chip>
-           
-
         </div>
-    </div>
 
-        <!-- <ion-item>
-            <ion-label>Select Items (Select 3)</ion-label>
-            <ion-chip-group formControlName="selectedItems">
-                <ion-chip *ngFor="let item of items">
-                    <ion-label>{{ item }}</ion-label>
-                    <ion-checkbox slot="end" [value]="item"></ion-checkbox>
+        <div  class="group">
+            <h4>As a parent select any 3 topics</h4>
+            <div>
+                <ion-chip *ngFor="let topic of topics" [color]="selectedTopics.includes(item) ? 'primary' : 'dark'"
+                    (click)="toggleItemSelection(topic)">
+                    <ion-label>{{ topic }}</ion-label>
                 </ion-chip>
-            </ion-chip-group>
-        </ion-item> -->
- <div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <ion-button [disabled]="!subscribeForm.valid" type="submit" class="ion-margin-top"  expand="block" fill="outline"  >
+                Continue to payment
+                </ion-button>
+            </div>
+        </div>
 
-    <div>
+    </form>
 
-        <ion-button class="ion-margin-top"  expand="block" fill="outline"  >
-        Continue to payment
-        </ion-button>
-    </div>
-
-     
-    
 </div>
