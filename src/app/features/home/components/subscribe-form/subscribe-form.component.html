@@ -68,7 +68,7 @@
         <div  class="group">
             <h4>As a parent select any 3 topics</h4>
             <div>
-                <ion-chip *ngFor="let topic of topics" [color]="selectedTopics.includes(item) ? 'primary' : 'dark'"
+                <ion-chip *ngFor="let topic of topics" [color]="selectedTopics.includes(topic) ? 'primary' : 'dark'"
                     (click)="toggleItemSelection(topic)">
                     <ion-label>{{ topic }}</ion-label>
                 </ion-chip>

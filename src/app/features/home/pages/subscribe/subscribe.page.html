@@ -6,10 +6,10 @@
             <ion-card>
                 <ion-row>
                     <ion-col sizeSm="12" sizeMd="8">
-                        <app-subscribe-form></app-subscribe-form>
+                        <app-subscribe-form #subscribeForm (isSubmit)="onSubmitClicked($event)"></app-subscribe-form>
                     </ion-col>
                     <ion-col sizeSm="12" sizeMd="4">
-                        <app-summary></app-summary>
+                        <app-summary (isSubmit)="onSubmitClicked($event)"></app-summary>
                     </ion-col>
                 </ion-row>
         

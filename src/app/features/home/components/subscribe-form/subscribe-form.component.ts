@@ -9,7 +9,8 @@ import { MONTHS, TOPICS, YEARS } from '../../constants/subscribe-form.constant';
   styleUrls: ['./subscribe-form.component.scss'],
 })
 export class SubscribeFormComponent {
-  @Output('submit') submit: EventEmitter<SubscribeFormModel> = new EventEmitter<SubscribeFormModel>();
+  @Output('isSubmit') isSubmit: EventEmitter<boolean> =
+    new EventEmitter<boolean>();
   subscribeForm!: FormGroup;
   months: string[] = MONTHS;
   years: number[] = YEARS;
@@ -42,13 +43,6 @@ export class SubscribeFormComponent {
   }
 
   onSubmit() {
-    if (this.subscribeForm.valid) {
-      const subscribeFormBody: SubscribeFormModel = {
-        ...this.subscribeForm.value,
-        topics: this.selectedTopics,
-      };
-
-       this.submit.next(subscribeFormBody)
-    }
+    this.isSubmit.next(true);
   }
 }
