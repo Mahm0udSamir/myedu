@@ -33,6 +33,18 @@
 
     ion-button{
         font-weight: bold;
+        color: #896AF9;
+        background: #fff;
+        --padding-top: var(--ion-padding, 16px);
+        --padding-bottom: var(--ion-padding, 16px);
+        display: block;
     }
+
+  @media (max-width: 768px) {
+    ion-button{
+        display: none;
+    }
+  }
+
 
     
