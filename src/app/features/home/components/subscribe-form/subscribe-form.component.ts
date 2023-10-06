@@ -24,7 +24,7 @@ export class SubscribeFormComponent {
   initForm() {
     this.subscribeForm = this.formBuilder.group({
       name: ['', Validators.required],
-      email: ['', Validators.required],
+      email: ['',[ Validators.required, Validators.email]],
       childName: ['', Validators.required],
       dayOfBirth: ['', Validators.required],
       monthOfBirth: ['', Validators.required],
@@ -43,6 +43,7 @@ export class SubscribeFormComponent {
   }
 
   onSubmit() {
+    console.log(this.subscribeForm)
     this.isSubmit.next(true);
   }
 }

@@ -9,7 +9,7 @@
                         <app-subscribe-form #subscribeForm (isSubmit)="onSubmitClicked($event)"></app-subscribe-form>
                     </ion-col>
                     <ion-col sizeSm="12" sizeMd="4">
-                        <app-summary (isSubmit)="onSubmitClicked($event)"></app-summary>
+                        <app-summary [disable]="!subscribeForm?.subscribeForm?.valid" (isSubmit)="onSubmitClicked($event)"></app-summary>
                     </ion-col>
                 </ion-row>
         

@@ -84,4 +84,35 @@
 
     </form>
 
+
+    <div *ngIf="!subscribeForm.valid && subscribeForm.dirty">
+        <div *ngIf="subscribeForm.get('name')?.hasError('required') && subscribeForm.get('name')?.touched">
+            <ion-text color="danger">* Name is required</ion-text>
+        </div>
+        <div *ngIf="(subscribeForm.get('email')?.hasError('required') || subscribeForm.get('email')?.hasError('email')) && subscribeForm.get('email')?.touched">
+            <ion-text color="danger">* Enter a valid Email</ion-text>
+        </div>
+        <div *ngIf="subscribeForm.get('childName')?.hasError('required') && subscribeForm.get('childName')?.touched">
+            <ion-text color="danger">* Child’s Full Name is required</ion-text>
+        </div>
+        <div *ngIf="subscribeForm.get('dayOfBirth')?.hasError('required') && subscribeForm.get('dayOfBirth')?.touched">
+            <ion-text color="danger">* Child’s Date of Birth is required</ion-text>
+        </div>
+        <div *ngIf="subscribeForm.get('monthOfBirth')?.hasError('required')  && subscribeForm.get('monthOfBirth')?.touched">
+            <ion-text color="danger">* Child’s Month of Birth is required</ion-text>
+        </div>
+        <div *ngIf="subscribeForm.get('yearOfBirth')?.hasError('required') && subscribeForm.get('yearOfBirth')?.touched">
+            <ion-text color="danger">* Child’s Month of Birth is required</ion-text>
+        </div>
+        <div *ngIf="subscribeForm.get('grade')?.hasError('required') && subscribeForm.get('grade')?.touched">
+            <ion-text color="danger">* Grade is required</ion-text>
+        </div>
+        <div *ngIf="subscribeForm.get('gender')?.hasError('required') && subscribeForm.get('gender')?.touched">
+            <ion-text color="danger">* Gender is required</ion-text>
+        </div>
+        <div *ngIf="selectedTopics.length < 3">
+            <ion-text color="danger">* Select at least 3 Topics</ion-text>
+        </div>
+    </div>
+
 </div>

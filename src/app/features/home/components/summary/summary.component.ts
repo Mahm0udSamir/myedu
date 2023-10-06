@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter} from '@angular/core';
+import { Component, Output, EventEmitter, Input} from '@angular/core';
 
 @Component({
   selector: 'app-summary',
@@ -7,7 +7,8 @@ import { Component, Output, EventEmitter} from '@angular/core';
 })
 export class SummaryComponent {
   @Output('isSubmit') isSubmit: EventEmitter<boolean> = new EventEmitter<boolean>();
-
+  @Input('disable') disable!: boolean ;
+  
   onSubmit() {
     this.isSubmit.next(true);
   }
