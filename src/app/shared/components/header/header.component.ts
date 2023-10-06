@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { CommonModule, Location } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 
 @Component({
@@ -9,4 +9,13 @@ import { IonicModule } from '@ionic/angular';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  @Input('allowBack') allowBack: boolean = false;
+  
+  constructor(private _location: Location) {}
+
+  goBack() {
+    console.log('back');
+    this._location.back();
+  }
+}

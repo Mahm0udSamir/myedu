@@ -1,1 +1,101 @@
-<p>subscribe-form works!</p>
+<div class="ion-margin">
+    <div class="header">
+        <h4>Contact Information</h4>
+        <ion-label>to our Monthly Surprise Box</ion-label>
+    </div>
+  
+    
+
+
+    <div class="group">
+        <h4>Contact Information</h4>
+         <div>
+    
+             <ion-label>Your Name</ion-label>
+             <ion-input class="ion-margin-vertical" placeholder="Enter your name" fill="outline"></ion-input>
+         </div>
+         <div>
+    
+             <ion-label>Email</ion-label>
+             <ion-input class="ion-margin-vertical" placeholder="Enter your email" fill="outline"></ion-input>
+         </div>
+    </div>
+
+    <div  class="group">
+        <h4>Child's Information</h4>
+        <div>
+            <ion-label>Child’s Full Name</ion-label>
+            <ion-input class="ion-margin-vertical" placeholder="Enter Child’s Full Name" fill="outline"></ion-input>
+        </div>
+         <div>
+    
+             <ion-label>Child’s Date of Birth</ion-label>
+             <ion-row>
+                <ion-col size="4">
+                     <ion-input  class="ion-margin-vertical" placeholder="Day" fill="outline"></ion-input>
+                </ion-col>
+                <ion-col size="4">
+                     <ion-input  class="ion-margin-vertical" placeholder="Month" fill="outline"></ion-input>
+                </ion-col>
+                <ion-col size="4">
+                     <ion-input  class="ion-margin-vertical" placeholder="Year" fill="outline"></ion-input>
+                </ion-col>
+                
+             </ion-row>
+         </div>
+
+        <div>
+            <ion-label>Grade</ion-label>
+            <ion-input class="ion-margin-vertical" placeholder="Enter Child’s Grade" fill="outline"></ion-input>
+        </div>
+
+        <ion-radio-group value="strawberries">
+            <ion-label>Gender</ion-label>
+            <ion-row>
+                <ion-col size="6">         
+                    <ion-item class="radio">
+                        <ion-radio   value="boy" justify="space-between">Boy</ion-radio>
+                    </ion-item>
+                </ion-col>
+                <ion-col size="6">
+                    <ion-item class="radio">
+                        <ion-radio value="girl" justify="space-between">Girl</ion-radio>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            </ion-radio-group>
+    </div>
+
+    <div  class="group">
+        <h4>As a parent select any 3 topics</h4>
+        <div>
+            <ion-chip [outline]="true">Outline</ion-chip>
+            <ion-chip [outline]="true">Outline</ion-chip>
+            <ion-chip [outline]="true">Outline</ion-chip>
+            <ion-chip [outline]="true">Outline</ion-chip>
+            <ion-chip [outline]="true">Outline</ion-chip>
+           
+
+        </div>
+
+        <!-- <ion-item>
+            <ion-label>Select Items (Select 3)</ion-label>
+            <ion-chip-group formControlName="selectedItems">
+                <ion-chip *ngFor="let item of items">
+                    <ion-label>{{ item }}</ion-label>
+                    <ion-checkbox slot="end" [value]="item"></ion-checkbox>
+                </ion-chip>
+            </ion-chip-group>
+        </ion-item> -->
+    <div>
+
+        <div>
+
+            <ion-button class="ion-padding-vertical ion-margin-top"  expand="block" fill="outline"  >
+            Continue to payment
+            </ion-button>
+        </div>
+
+     
+    
+</div>

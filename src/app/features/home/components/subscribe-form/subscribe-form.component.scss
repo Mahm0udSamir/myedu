@@ -1,0 +1,38 @@
+    h4{
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    ion-label{
+        font-size: 17px;
+    }
+
+    .header{
+        border-bottom: 1px solid #D1C5FB;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+
+    .group{
+        margin-bottom: 50px;
+        div{
+            margin-bottom: 16px;
+        }
+        ion-input{
+            --border-radius: 8px;
+        }
+        .radio{
+            border: 1px solid #D1C5FB;
+            border-radius: 8px;
+            ion-radio{
+                    padding: 10px;
+            }
+           
+        }
+    }
+
+    ion-button{
+        font-weight: bold;
+    }
+
+    
