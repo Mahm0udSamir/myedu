@@ -1,1 +1,30 @@
-<p>footer works!</p>
+<div class="footer-ops">
+    <h2>Logo</h2>
+    <ion-list class="ion-margin-top" lines="none" mode="ios">
+        <ion-item *ngFor="let link of links" class="ion-no-padding">
+            <ion-label>{{link}}</ion-label>
+        </ion-item>    
+    </ion-list>
+
+    <div class="ion-margin-top ion-padding-top">
+        <ion-label>Subscribe</ion-label>
+        <ion-input class="ion-margin-vertical" placeholder="Enter your email"   fill="outline" ></ion-input>
+
+        <ion-button class="ion-no-margin"  size="large" color="dark" expand="block" fill="outline">
+            Subscribe
+        </ion-button>
+
+    </div>
+</div>
+
+<div class="footer">
+    <ul>
+        <li>Privacy Policy</li>
+        <li>Privacy Policy</li>
+        <li>Cookies Settings</li>
+    </ul>
+
+    <p>
+        © 2023 MyEdu. All rights reserved.
+    </p>
+</div>

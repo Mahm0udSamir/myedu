@@ -1,7 +1,7 @@
 .container {
     color: #000;
     text-align: center;
-
+    position: relative;
     ion-row {
         padding: 74px 0;
     }
@@ -9,12 +9,12 @@
     .bg {
         position: absolute;
         width: 100vw;
-        height: 125vh;
+        height: 100%;
         left: 0;
     }
 
     h1 {
-        font-size: 40px;
+        font-size: 37px;
         font-style: normal;
         font-weight: 900;
         line-height: 120%;
